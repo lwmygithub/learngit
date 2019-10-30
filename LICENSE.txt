@@ -1,0 +1,11 @@
+ //启动流程插入到T_P_BASEBUSINESS表的参数
+  1.flowOperationService.startBusProcess(initUser, "workPlan", businessId, variables, paraMap);
+  
+  
+  
+  
+  
+  ？
+   ProcessInstance processInstance = this.processEngine.getRuntimeService().startProcessInstanceByKey(processDefinitionKey, businessKey, variables);
+   
+   task = (Task)((TaskQuery)this.processEngine.getTaskService().createTaskQuery().processInstanceId(processInstance.getProcessInstanceId())).singleResult();
